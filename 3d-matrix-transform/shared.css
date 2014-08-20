@@ -1,0 +1,21 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 480px;
+	height: 320px;
+}
+.surface {
+	position: absolute;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	top: -2rem;
+	left: -2rem;
+	height: 4rem;
+	width: 4rem;
+	background-color: #000;
+	opacity: 0.4;
+	will-change: transform;
+}
