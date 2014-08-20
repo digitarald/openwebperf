@@ -2,9 +2,11 @@
 
 **Pushing Open Web performance** by documenting platform performance bottlenecks.
 
-## Purpose
+## Goals
 
-Document known performance bottlenecks with the lower levels of the Open Web platform layout (like JIT, layout engine, CSS parsing, etc). Examples should raise the issues to the platform team and allow developers learn the *do's and dont's*.
+* Document performance bottlenecks within the lower platform levels (like JIT, layout engine, CSS parsing, etc)
+* Raise the issues to the platform team and track progress
+* Build a reference of *do's and dont's*
 
 ## Test Cases
 
@@ -16,7 +18,7 @@ Related bugs:
 
 * [998995: Consider using an auto array in CSSParserImpl::ParseFunction](https://bugzilla.mozilla.org/show_bug.cgi?id=998995)
 
-#### [3d-matrix-transform/direct.html](Direct string concatenation)
+#### [Direct String Concatenation](http://digitarald.github.io/openwebperf/3d-matrix-transform/direct.html)
 
 Profiles:
 
@@ -26,7 +28,7 @@ Remarks:
 
 * Layout team offered to look into jitting the `element.style.transform = '3dmatrix(…` assignment and comparing to adding a new API (like `element.mozSetTransform(Float32Array)`
 
-#### [3d-matrix-transform/for-loop.html](For loop concatenation)
+#### [For-Loop Concatenation](http://digitarald.github.io/openwebperf/3d-matrix-transform/3d-matrix-transform/for-loop.html)
 
 Profiles:
 
