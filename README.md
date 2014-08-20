@@ -1,4 +1,4 @@
-# OpenWeb*Perf*
+# OpenWebPerf
 
 **Pushing Open Web performance** by documenting platform performance bottlenecks.
 
@@ -18,7 +18,7 @@ Related bugs:
 
 #### [3d-matrix-transform/direct.html](Direct string concatenation)
 
-Profiles
+Profiles:
 
 * [Firefox Nightly, 34.0a1 (2014-08-19)](http://people.mozilla.org/~bgirard/cleopatra/#report=234f70ef898c6bb7e98e3fd7f6dd52a0a5dbb0af)
 
@@ -28,11 +28,11 @@ Remarks:
 
 #### [3d-matrix-transform/for-loop.html](For loop concatenation)
 
-##### Profiles
+Profiles:
 
 * [Firefox Nightly, 34.0a1 (2014-08-19)](http://people.mozilla.org/~bgirard/cleopatra/#report=01dba3a825799208c394a949cf82c3c13d62a682)
 
-##### Remarks
+Remarks
 
 * The layout team remarked that the loop will not be jitted as the length is too short
 * The values are normalized to optimize for 0, which the CSS parser already does internally
