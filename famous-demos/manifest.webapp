@@ -1,0 +1,8 @@
+{
+	"name": "Famo.us Demos",
+	"description": "Demos",
+	"launch_path": "/openwebperf/famous-demos/index.html",
+	"chrome": {
+		"navigation": true
+	}
+}

@@ -8,7 +8,7 @@ var benchMax = location.hash.substr(1);
 if (benchMax) {
 	benchMax = Number(benchMax);
 } else {
-	benchMax = 200;
+	benchMax = 200; // Graphics team recommendation is 60
 }
 
 /**
@@ -56,6 +56,27 @@ var speed = Math.PI / 4;
 
 function update3DMatrix(matrix, dt) {
 	mat4.rotateZ(matrix, matrix, speed * dt);
+}
+
+
+function apply3DMatrix(element, m) {
+	element.style.transform = 'matrix3d(' +
+		m[0] + ', ' +
+		m[1] + ', ' +
+		m[2] + ', ' +
+		m[3] + ', ' +
+		m[4] + ', ' +
+		m[5] + ', ' +
+		m[6] + ', ' +
+		m[7] + ', ' +
+		m[8] + ', ' +
+		m[9] + ', ' +
+		m[10] + ', ' +
+		m[11] + ', ' +
+		m[12] + ', ' +
+		m[13] + ', ' +
+		m[14] + ', ' +
+		m[15] + ')';
 }
 
 var past = performance.now();

@@ -38,3 +38,5 @@ Remarks
 
 * The layout team remarked that the loop will not be jitted as the length is too short
 * The values are normalized to optimize for 0, which the CSS parser already does internally
+
+#### [Less precision & Direct](http://digitarald.github.io/openwebperf/3d-matrix-transform/rounding.html)

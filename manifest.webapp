@@ -1,0 +1,7 @@
+{
+	"name": "OpenWebPerf",
+	"launch_path": "/openwebperf/",
+	"chrome": {
+		"navigation": true
+	}
+}
