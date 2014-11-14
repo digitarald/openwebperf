@@ -3,5 +3,6 @@
 	"launch_path": "/openwebperf/",
 	"chrome": {
 		"navigation": true
-	}
+	},
+	"fullscreen": true
 }

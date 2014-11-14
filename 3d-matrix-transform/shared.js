@@ -8,7 +8,7 @@ var benchMax = location.hash.substr(1);
 if (benchMax) {
 	benchMax = Number(benchMax);
 } else {
-	benchMax = 200; // Graphics team recommendation is 60
+	benchMax = 100; // Graphics team recommendation is 60
 }
 
 /**

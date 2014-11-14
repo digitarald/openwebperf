@@ -4,5 +4,6 @@
 	"launch_path": "/openwebperf/famous-demos/index.html",
 	"chrome": {
 		"navigation": true
-	}
+	},
+	"fullscreen": true
 }
