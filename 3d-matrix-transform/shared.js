@@ -8,7 +8,7 @@ var benchMax = location.hash.substr(1);
 if (benchMax) {
 	benchMax = Number(benchMax);
 } else {
-	benchMax = 100; // Graphics team recommendation is 60
+	benchMax = 200; // Graphics team recommendation is 60
 }
 
 /**
@@ -27,7 +27,7 @@ for (var i = 0; i < benchMax; i++) {
 
 	var element = document.createElement('div');
 	element.classList.add('surface');
-	apply3DMatrix(element, matrix);
+	updateTransform(element, stringify3DMatrix(matrix));
 	body.appendChild(element);
 
 	surfaces.push({
@@ -46,7 +46,7 @@ function tick(now) {
 		var matrix = surfaces[i].matrix;
 		var element = surfaces[i].element;
 		update3DMatrix(matrix, dt);
-		apply3DMatrix(element, matrix);
+		updateTransform(element, stringify3DMatrix(matrix));
 	}
 
 	requestAnimationFrame(tick);
@@ -58,7 +58,11 @@ function update3DMatrix(matrix, dt) {
 	mat4.rotateZ(matrix, matrix, speed * dt);
 }
 
+function updateTransform(element, str) {
+	element.style.transform = str;
+}
 
+/*
 function apply3DMatrix(element, m) {
 	element.style.transform = 'matrix3d(' +
 		m[0] + ', ' +
@@ -78,6 +82,7 @@ function apply3DMatrix(element, m) {
 		m[14] + ', ' +
 		m[15] + ')';
 }
+*/
 
 var past = performance.now();
 requestAnimationFrame(tick);

@@ -1,21 +1,25 @@
 'use strict';
 
-function apply3DMatrix(element, m) {
-	element.style.transform = 'matrix3d(' +
-		m[0] + ', ' +
-		m[1] + ', ' +
-		m[2] + ', ' +
-		m[3] + ', ' +
-		m[4] + ', ' +
-		m[5] + ', ' +
-		m[6] + ', ' +
-		m[7] + ', ' +
-		m[8] + ', ' +
-		m[9] + ', ' +
-		m[10] + ', ' +
-		m[11] + ', ' +
-		m[12] + ', ' +
-		m[13] + ', ' +
-		m[14] + ', ' +
+function closeToZero(value) {
+	return (value < 0.000001 && value > -0.000001) ? 0.0 : value;
+}
+
+function stringify3DMatrix(m) {
+	return 'matrix3d(' +
+		closeToZero(m[0]) + ', ' +
+		closeToZero(m[1]) + ', ' +
+		closeToZero(m[2]) + ', ' +
+		closeToZero(m[3]) + ', ' +
+		closeToZero(m[4]) + ', ' +
+		closeToZero(m[5]) + ', ' +
+		closeToZero(m[6]) + ', ' +
+		closeToZero(m[7]) + ', ' +
+		closeToZero(m[8]) + ', ' +
+		closeToZero(m[9]) + ', ' +
+		closeToZero(m[10]) + ', ' +
+		closeToZero(m[11]) + ', ' +
+		closeToZero(m[12]) + ', ' +
+		closeToZero(m[13]) + ', ' +
+		closeToZero(m[14]) + ', ' +
 		m[15] + ')';
 }
